@@ -1,5 +1,7 @@
 {
-  "dependencies": {
-    "react": "^18.2.0"
+  "scripts": {
+     "web": "cd client && npm start",
+     "api": "ts-node server/src/index.ts",
+     "build": "cd client && npm run build && cd ../server && npm run tsc"
   }
 }
