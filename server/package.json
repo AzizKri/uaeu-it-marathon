@@ -1,7 +1,7 @@
 {
-    "name": "uaeu_clubs_api",
+    "name": "it_marathon_api",
     "version": "0.0.1",
-    "description": "UAEU Clubs API using TypeORM.",
+    "description": "IT Marathon API.",
     "type": "commonjs",
     "dependencies": {
         "body-parser": "^1.20.2",
@@ -17,9 +17,9 @@
         "typescript": "^5.2.2"
     },
     "scripts": {
-       "start": "ts-node src/index.ts",
-       "typeorm": "typeorm-ts-node-commonjs",
-       "tsc": "tsc",
-       "start:prod": "node build/index.js"
+        "start": "ts-node src/index.ts",
+        "typeorm": "typeorm-ts-node-commonjs",
+        "tsc": "tsc",
+        "start:prod": "node build/index.js"
     }
 }
