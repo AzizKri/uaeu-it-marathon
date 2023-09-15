@@ -3,8 +3,6 @@ import { DataSource } from "typeorm"
 
 import { User } from "./entity/User"
 
-// require('dotenv').config();
-
 export const AppDataSource = new DataSource({
     type: "postgres",
     host: process.env.example.POSTGRES_HOST,
@@ -13,7 +11,7 @@ export const AppDataSource = new DataSource({
     password: process.env.example.POSTGRES_PASSWORD,
     database: process.env.example.POSTGRES_DB,
     synchronize: true,
-    // ssl: true,
+    ssl: true,
     logging: false,
     entities: [User],
     migrations: [],
