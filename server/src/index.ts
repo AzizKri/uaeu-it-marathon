@@ -4,7 +4,7 @@ import * as express from "express"
 import * as cors from "cors"
 var bodyParser = require('body-parser')
 
-const secret = "Bearer 662cdd4f-0c59-49f7-a6c5-c0556478e8ac";
+const secret = process.env.example.AUTH_SECRET;
 
 AppDataSource.initialize().then(async () => {
     console.log("Initializing...")
