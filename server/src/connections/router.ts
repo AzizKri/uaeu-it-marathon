@@ -1,9 +1,9 @@
-import { addUser, getUsers } from './UserAPI';
+import { createStudent, getStudent } from './StudentAPI';
 
 const express = require('express');
 
 const defRouter = express.Router()
-const userRouter = express.Router()
+const studentRouter = express.Router()
 
 // Default
 
@@ -11,10 +11,10 @@ defRouter.get("/", (req, res) => {
     res.status(200).json({ ok:"true" })
 })
 
-// Users API
-userRouter.get("/getUsers", getUsers)
-userRouter.post("/addUser", addUser)
+// Student API
+studentRouter.get("/getStudent/:sid", getStudent)
+studentRouter.post("/createStudent", createStudent)
 
-export { defRouter, userRouter }
+export { defRouter, studentRouter }
 
 
