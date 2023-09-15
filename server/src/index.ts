@@ -1,10 +1,10 @@
-import { userRouter, defRouter } from "./connections/router"
+import { studentRouter, defRouter } from "./connections/router"
 import { AppDataSource } from "./data-source"
 import * as express from "express"
 import * as cors from "cors"
 var bodyParser = require('body-parser')
 
-const secret = process.env.example.AUTH_SECRET;
+const secret = process.env.AUTH_SECRET;
 
 AppDataSource.initialize().then(async () => {
     console.log("Initializing...")
@@ -22,7 +22,7 @@ AppDataSource.initialize().then(async () => {
         next();
     })
     app.use("", defRouter)
-    app.use("/users/v1", userRouter)
+    app.use("/students", studentRouter)
 
     // start express server
     app.listen(3000)
