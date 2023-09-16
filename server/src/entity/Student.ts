@@ -16,6 +16,12 @@ export class Student {
     @Column()
     school: string
 
-    @ManyToOne(() => Team, (team) => team.members)
+    @Column({nullable: true})
+    grade: number
+
+    @ManyToOne(() => Team, (team) => team.members, {
+        nullable: true,
+        cascade: true
+    })
     team: Team
 }
