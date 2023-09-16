@@ -1,10 +1,10 @@
-import { studentRouter, defRouter } from "./connections/router"
+import { studentRouter, defRouter, teamRouter, supervisorRouter } from "./connections/router"
 import { AppDataSource } from "./data-source"
 import * as express from "express"
 import * as cors from "cors"
 var bodyParser = require('body-parser')
 
-const secret = process.env.AUTH_SECRET;
+// const secret = process.env.AUTH_SECRET;
 
 AppDataSource.initialize().then(async () => {
     console.log("Initializing...")
@@ -13,16 +13,18 @@ AppDataSource.initialize().then(async () => {
     app.use(express.json())
     app.use(bodyParser.json())
     app.use(cors())
-    app.use(function(req, res, next) {
-        if (!req.headers.authorization) {
-            return res.status(401).json({ error: 'Unauthorized.' });
-        } else if (req.headers.authorization !== secret) {
-            return res.status(403).json({ error: 'Unauthorized.' });
-        }
-        next();
-    })
+    // app.use(function(req, res, next) {
+    //     if (!req.headers.authorization) {
+    //         return res.status(401).json({ error: 'Unauthorized.' });
+    //     } else if (req.headers.authorization !== secret) {
+    //         return res.status(403).json({ error: 'Unauthorized.' });
+    //     }
+    //     next();
+    // })
     app.use("", defRouter)
-    app.use("/students", studentRouter)
+    app.use("/student", studentRouter)
+    app.use("/supervisor", supervisorRouter)
+    app.use("/team", teamRouter)
 
     // start express server
     app.listen(3000)
