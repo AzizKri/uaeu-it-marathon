@@ -9,6 +9,9 @@ export class Team {
     id: string
 
     @Column()
+    name: string
+
+    @Column()
     school: string
 
     @OneToMany(() => Student, (student) => student.team)
