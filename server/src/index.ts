@@ -2,9 +2,10 @@ import { studentRouter, defRouter, teamRouter, supervisorRouter } from "./connec
 import { AppDataSource } from "./data-source"
 import * as express from "express"
 import * as cors from "cors"
+import jwt from "jsonwebtoken"; 
 var bodyParser = require('body-parser')
 
-// const secret = process.env.AUTH_SECRET;
+export let JWT_SECRET: jwt.Secret;
 
 AppDataSource.initialize().then(async () => {
     console.log("Initializing...")

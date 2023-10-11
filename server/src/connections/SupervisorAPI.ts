@@ -26,6 +26,23 @@ export async function getSupervisor(req: Request, res: Response) {
     getEntity();
 };
 
+export async function getSupervisorByEmail(req: Request, res: Response) {
+    if (req.params.email === null) {
+        return res.status(400).json({ error: "INCOMPLETE"});
+    };
+    const email = req.params.email;
+    const getEntity = async () => {
+        const supervisor = await AppDataSource.getRepository(Supervisor).findOneByOrFail({
+            email: email,
+        }).then(() => {
+            return res.status(200).send(supervisor);
+        }).catch((e) => {
+            return res.status(404).send(e)
+        });
+    };
+    getEntity();
+};
+
 export async function createSupervisor(req: Request, res: Response) {
     // Authorization
 

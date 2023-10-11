@@ -8,6 +8,9 @@ export class Supervisor {
     id: string
 
     @Column()
+    email: string
+
+    @Column()
     fname: string
 
     @Column()
