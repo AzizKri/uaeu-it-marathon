@@ -25,10 +25,10 @@ function Student() {
         getData();
     }, [])
 
-    const location = window.location.href.split("/");
-    let path = location[location.length - 1];
-
     useEffect(() => {
+        const location = window.location.href.split("/");
+        const path = location[location.length - 1];
+        
         const dataList = []
         for (let stu in data) {
             dataList.push(data[stu]["Data"])
