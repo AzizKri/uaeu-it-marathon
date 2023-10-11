@@ -2,13 +2,14 @@ import React, { useEffect, useState } from 'react';
 import * as XLSX from 'xlsx';
 import StudentInfo from './StudentInfo';
 
+const datasheet = process.env.REACT_APP_DATASHEET_LINK;
+
 function Student() {
     const [element, setElement] = useState()
     const [data, setData] = useState()
     useEffect(() => {
         const getData = async () => {
-            const url = 'https://files.uaeu.club/itmarathon/data/students.xlsx';
-            const response = await fetch(url);
+            const response = await fetch(datasheet);
             const data = await response.blob()
             const reader = new FileReader();
             reader.readAsBinaryString(data)
