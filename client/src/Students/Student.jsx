@@ -1,18 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import * as XLSX from 'xlsx';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import StudentInfo from './StudentInfo';
 
 function Student() {
     const [element, setElement] = useState()
     const [data, setData] = useState()
     useEffect(() => {
-        const header = {
-            "Content-Type": "blob"
-        }
         const getData = async () => {
             const url = 'https://files.uaeu.club/itmarathon/data/students.xlsx';
-            const response = await fetch(url, header);
+            const response = await fetch(url);
             const data = await response.blob()
             const reader = new FileReader();
             reader.readAsBinaryString(data)
@@ -28,29 +24,24 @@ function Student() {
         getData();
     }, [])
 
-    console.log(data)
     const location = window.location.href.split("/");
-    let path = location[location.length - 1].toLowerCase();
-
-    const dataList = []
-    for (let stu in data) {
-        dataList.push(data[stu]["Data"])
-    }
-
-    console.log(dataList)
+    let path = location[location.length - 1];
 
     useEffect(() => {
-        if (dataList[path]) {
-            setElement(<StudentInfo name={}/>)
+        const dataList = []
+        for (let stu in data) {
+            dataList.push(data[stu]["Data"])
         }
-    })
+
+        const stu = dataList.find((code) => code === path)
+        if (stu) {
+            const info = data[data.findIndex((row) => row["Data"] === path)]
+            setElement(<StudentInfo name={info["Name"]} school={info["School"]} supervisor={info["Supervisor"]}/>)
+        }
+    }, [data])
 
     return ((element)?
-        <BrowserRouter>
-            <Routes>
-                <Route path={path} element={element}/>
-            </Routes>
-        </BrowserRouter>
+        element
         :
         <div className='loading'>
         <h1>Loading...</h1>
