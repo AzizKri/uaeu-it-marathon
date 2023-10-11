@@ -1,7 +1,10 @@
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import * as XLSX from 'xlsx';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import StudentInfo from './StudentInfo';
 
 function Student() {
+    const [element, setElement] = useState()
     const [data, setData] = useState()
     useEffect(() => {
         const header = {
@@ -25,31 +28,32 @@ function Student() {
         getData();
     }, [])
 
-    return (
-        <div className="App">
-            <header className="App-header">
-                {data && data.length > 0 && (
-                <table className="table">
-                <thead>
-                    <tr>
-                    {Object.keys(data[0]).map((key) => (
-                        <th key={key}>{key}</th>
-                    ))}
-                    </tr>
-                </thead>
-                <tbody>
-                    {data.map((row, index) => (
-                    <tr key={index}>
-                        {Object.values(row).map((value, index) => (
-                        <td key={index}>{value}</td>
-                        ))}
-                    </tr>
-                    ))}
-                </tbody>
-                </table>
-            )}
+    console.log(data)
+    const location = window.location.href.split("/");
+    let path = location[location.length - 1].toLowerCase();
 
-            </header>
+    const dataList = []
+    for (let stu in data) {
+        dataList.push(data[stu]["Data"])
+    }
+
+    console.log(dataList)
+
+    useEffect(() => {
+        if (dataList[path]) {
+            setElement(<StudentInfo name={}/>)
+        }
+    })
+
+    return ((element)?
+        <BrowserRouter>
+            <Routes>
+                <Route path={path} element={element}/>
+            </Routes>
+        </BrowserRouter>
+        :
+        <div className='loading'>
+        <h1>Loading...</h1>
         </div>
     );
 }
