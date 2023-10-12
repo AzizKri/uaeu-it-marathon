@@ -1,15 +1,21 @@
 import React from 'react';
 
-function StudentInfo({name, school, supervisor}) {
+function StudentInfo({ title, name, school, team, supervisor }) {
     return (
         <div>
-            {name}
+            Title: {title}
             <br />
             <br />
-            {school}
+            Name: {name}
             <br />
             <br />
-            {supervisor}
+            School: {school}
+            <br />
+            <br />
+            Team: {team}
+            <br />
+            <br />
+            {(supervisor)? supervisor :""}
             <br />
             <br />
         </div>

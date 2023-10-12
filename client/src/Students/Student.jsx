@@ -31,13 +31,13 @@ function Student() {
         
         const dataList = []
         for (let stu in data) {
-            dataList.push(data[stu]["Data"])
+            dataList.push(data[stu]["Code"])
         }
 
         const stu = dataList.find((code) => code === path)
         if (stu) {
-            const info = data[data.findIndex((row) => row["Data"] === path)]
-            setElement(<StudentInfo name={info["Name"]} school={info["School"]} supervisor={info["Supervisor"]}/>)
+            const info = data[data.findIndex((row) => row["Code"] === path)]
+            setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team"]}supervisor={info["Supervisor"]}/>)
         }
     }, [data])
 
