@@ -56,7 +56,7 @@ function Student() {
         } else {
             if (stu) {
                 const info = data[data.findIndex((row) => row["Code"] === path)]
-                setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team"]}supervisor={info["Supervisor"]}/>)
+                setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team"]}supervisor={info["Supervisor Name"]}/>)
             } else {
                 setElement(<h1>Student not found</h1>)
             }
