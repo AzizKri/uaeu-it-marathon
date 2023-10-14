@@ -56,9 +56,18 @@ function Student() {
         } else {
             if (stu) {
                 const info = data[data.findIndex((row) => row["Code"] === path)]
+                console.log(info["Supervisor Name"])
                 setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team"]}supervisor={info["Supervisor Name"]}/>)
             } else {
-                setElement(<h1>Student not found</h1>)
+                setElement(
+                    <div className="not_found">
+                        <h1>Student not found</h1>
+                        <div className='Powered'>
+                            <p><b>Powered by</b></p>
+                            <img src="/cs.png" alt='CS Club'/>
+                        </div>
+                    </div>
+                )
             }
         }
     }, [data])
@@ -66,8 +75,14 @@ function Student() {
     return ((element)?
         element
         :
-        <div className='loading'>
-            <h1>Loading...</h1>
+        <div>
+            <div className='loading'>
+                <h1>Loading...</h1>
+            </div>
+            <div className='Powered'>
+                <p><b>Powered by</b></p>
+                <img src="/cs.png" alt='CS Club'/>
+            </div>
         </div>
     );
 }

@@ -10,8 +10,31 @@
   align-items: center;
   justify-content: center;
   gap: 1rem;
+  margin-top: 50vh;
 }
 
-.Powered img {
+.Info_Powered {
+  display: flex;
+  padding-bottom: 2vh;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.Powered img,
+.Info_Powered img {
   max-height: 8vh;
+}
+
+.not_found,
+.redirect {
+  margin: 0;
+  display: flex;
+  position: absolute;
+  width: 100%;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  overflow: hidden;
+  justify-content: flex-end;
 }
