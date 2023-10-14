@@ -58,6 +58,18 @@ function Student() {
                 const info = data[data.findIndex((row) => row["Code"] === path)]
                 console.log(info["Supervisor Name"])
                 setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team"]}supervisor={info["Supervisor Name"]}/>)
+            } else if (data === undefined) {
+                setElement(
+                    <div>
+                        <div className='loading'>
+                            <h1>Loading...</h1>
+                        </div>
+                        <div className='Powered'>
+                            <p><b>Powered by</b></p>
+                            <img src="/cs.png" alt='CS Club'/>
+                        </div>
+                    </div>
+                )
             } else {
                 setElement(
                     <div className="not_found">
