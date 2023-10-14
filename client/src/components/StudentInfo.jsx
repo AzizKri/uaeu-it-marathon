@@ -30,8 +30,8 @@ function StudentInfo({ title, name, school, team, supervisor }) {
                         <p className="school">{school}</p>
                         <p className="supervisor-field"><b>Team: </b></p>
                         <p className="supervisor">{team}</p>
-                        <p className="supervisor-field"><b>{(supervisor === "")? "Supervisor: " : ""}</b></p>
-                        <p className="supervisor">{(supervisor)? supervisor : ""}</p>
+                        <p className="supervisor-field"><b>{(supervisor.length <= 2)? "" : "Supervisor: "}</b></p>
+                        <p className="supervisor">{supervisor}</p>
                     </div>
                 </div>
                 <hr />
