@@ -13,7 +13,7 @@ function StudentInfo({ title, name, school, team, supervisor }) {
                         <p>{title}</p>
                         <p className="desi">IT Marathon</p>
                         <div className="barcode">
-                            <img src="/qrsample.png" alt='qr code'/>
+                            <img src="/logo256.png" alt='qr code'/>
                         </div>
                         <br />
                     </div>
