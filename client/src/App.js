@@ -1,11 +1,10 @@
 import './App.css';
-import Student from './Students/Student';
+import Student from './containers/Student';
 
 function App() {
   return (
     <div className="App">
       <Student />
-    
     </div>
   );
 }
