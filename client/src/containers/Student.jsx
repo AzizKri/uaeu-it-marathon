@@ -3,6 +3,7 @@ import * as XLSX from 'xlsx';
 import StudentInfo from '../components/StudentInfo';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Redirect from '../components/Redirect';
+// import TeamInfo from '../components/TeamInfo';
 
 const datasheet = process.env.REACT_APP_DATASHEET_LINK;
 
@@ -56,14 +57,16 @@ function Student() {
         } else {
             if (stu) {
                 const info = data[data.findIndex((row) => row["Code"] === path)]
-                console.log(info["Supervisor Name"])
-                setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team"]}supervisor={info["Supervisor Name"]}/>)
+				setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team Name"]} supervisor={info["Supervisor Name"]}/>)
+				// if (info["Type"] === "Student") {
+				// 	setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team Name"]} supervisor={info["Supervisor Name"]}/>)
+				// } else if (info["Type"] === "Team") {
+				// 	setElement(<TeamInfo team_id={info["ID"]} team={info["Team"]} school={info["School"]} supervisor={info["Supervisor Name"]} students={info["Student 1"]}/>)
+				// }
             } else if (data === undefined) {
                 setElement(
-                    <div>
-                        <div className='loading'>
-                            <h1>Loading...</h1>
-                        </div>
+                    <div className="not_found">
+                        <h1>Loading...</h1>
                         <div className='Powered'>
                             <p><b>Powered by</b></p>
                             <img src="/cs.png" alt='CS Club'/>
