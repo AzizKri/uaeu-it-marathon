@@ -2,7 +2,6 @@ import React from 'react';
 import "./teaminfo.css";
 
 function TeamInfo({ team_id, team, school, supervisor, students }) {
-	console.log(students)
     return (
         <div>
             <div className="container">
