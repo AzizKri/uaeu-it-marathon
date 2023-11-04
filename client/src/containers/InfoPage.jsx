@@ -9,6 +9,19 @@ const teamDatasheet = process.env.REACT_APP_TEAM_DATASHEET_LINK;
 function InfoPage() {
     const [element, setElement] = useState()
     const [data, setData] = useState()
+
+	const capitalize = (name) => {
+		if (name === undefined) {
+			return name;
+		}
+		const nameList = name.split(" ");
+		let returnName = "";
+		for (let i in nameList) {
+			returnName += nameList[i].toLowerCase().charAt(0).toUpperCase() + nameList[i].slice(1).toLowerCase() + " ";
+		}
+		return returnName;
+	}
+
     useEffect(() => {
         const location = window.location.href.split("/");
         const path = location[location.length - 1];
@@ -51,7 +64,6 @@ function InfoPage() {
 		for (let stu in data) {
 			dataList.push(data[stu]["Code"])
 		}
-
 		
 		if (path === "itmarathon.uaeu.club" || path === "localhost:3000" || path === "") {
 			// do nothing
@@ -59,7 +71,7 @@ function InfoPage() {
 			const team = dataList.find((code) => code === path)
 			if (team) {
 				const info = data[data.findIndex((row) => row["Code"] === path)]
-				setElement(<TeamInfo team_id={info["ID"]} team={info["Team"]} school={info["School"]} supervisor={info["Supervisor"]} students={[info["Student1"], info["Student2"], info["Student3"], info["Student4"]]}/>)
+				setElement(<TeamInfo team_id={info["ID"]} team={info["Team"]} school={info["School"]} supervisor={capitalize(info["Supervisor"])} students={[capitalize(info["Student1"]), capitalize(info["Student2"]), capitalize(info["Student3"]), capitalize(info["Student4"])]}/>)
 			} else if (data === undefined) {
 				setElement(<Loading />)
 			} else {
