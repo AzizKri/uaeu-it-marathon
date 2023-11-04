@@ -4,8 +4,8 @@
     box-sizing: content-box;
 }
 
-.container {
-    height: 90vh;
+.team_container {
+    height: 100vh;
     width: 100%;
     display: flex;
     align-items: center;
@@ -16,15 +16,15 @@
 
 }
 
-.font{
+.team_font{
     height: 375px;
     width: 250px;
     position: relative;
     border-radius: 10px;
 }
 
-.top{
-    height: 30%;
+.team_top{
+    height: 13%;
     width: 100%;
     background-color: #1c7ed6;
     position: relative;
@@ -33,56 +33,48 @@
     border-top-right-radius: 15px;
 }
 
-.bottom{
-    height: 70%;
+.team_bottom{
+    height: 87%;
     width: 100%;
     background-color: white;
     position: absolute;
     border-bottom-left-radius: 15px;
     border-bottom-right-radius: 15px;
+    padding-top: 10px;
 }
 
-.top img{
-    height: 100px;
-    width: 100px;
-    background-color: #e6ebe0;
-    border-radius: 10px;
-    position: absolute;
-    top:60px;
-    left: 75px;
-}
-.bottom p{
+.team_bottom p{
     position: relative;
-    top: 60px;
+    /* top: 0px; */
     text-align: center;
     text-transform: capitalize;
     font-weight: bold;
     font-size: 30px;
     text-emphasis: spacing;
 }
-.bottom .desi{
+.team_bottom .team_desi{
     font-size:12px;
     color: grey;
     font-weight: normal;
 }
-.bottom .no{
+.team_bottom .team_no{
     font-size: 15px;
     font-weight: normal;
 }
-.barcode img
+.team_barcode img
 {
     height: 65px;
     width: 65px;
     text-align: center;
     margin: 5px;
 }
-.barcode{
+.team_barcode{
     text-align: center;
     position: relative;
     top: 70px;
 }
 
-.back
+.team_back
 {
     height: 375px;
     width: 250px;
@@ -90,13 +82,13 @@
     background-color: #1c7ed6;
 
 }
-.qr img{
+.team_qr img{
     height: 80px;
     width: 100%;
     margin: 20px;
     background-color: white;
 }
-.Details {
+.team_Details {
     color: white;
     text-align: center;
     padding: 10px;
@@ -104,7 +96,7 @@
 }
 
 
-.details-info{
+.team_details-info{
     color: white;
     text-align: left;
     padding: 5px;
@@ -115,48 +107,53 @@
     line-height: 22px;
 }
 
-.logo {
-    height: 40px;
-    width: 150px;
-    padding: 40px;
-}
-
-.logo img{
-    height: 100%;
-    width: 100%;
-    color: white ;
-
-}
-.padding{
+.team_padding{
     padding-right: 20px;
 }
 
-.name-field{
+.team_name-field{
     font-size: 25px;
 }
 
-.supervisor-field,
-.school-field,
-.student-field {
+.team_supervisor-field{
     margin-top: 20px;
     font-size: 25px;
 }
 
+.team_school-field{
+    margin-top: 20px;
+    font-size: 25px;
+}
+
+.team_bottom .team_info{
+    font-size: 20px;
+    font-weight: 300;
+}
+
+.team_student-separator {
+	margin: 5px 0 5px 0;
+	border-radius: 2px;
+	border: none;
+	border-top: 2px double rgba(20, 47, 71, 0.3);
+	height: 3px;
+	width: 100%;
+}
+
 @media screen and (max-width:400px)
 {
-    .container{
+    .team_container{
         height: 130vh;
     }
-    .container .front{
+    .team_container .team_front{
         margin-top: 50px;
     }
 }
 @media screen and (max-width:600px)
 {
-    .container{
+    .team_container{
         height: 130vh;
     }
-    .container .front{
+    .team_container .team_front{
         margin-top: 50px;
     }
 
