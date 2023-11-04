@@ -13,7 +13,7 @@ function TeamInfo({ team_id, team, school, supervisor, students }) {
 						</div>
 						<div className="team_bottom">
 							<p>Team:</p>
-							<p className="team_info">{team}</p>
+							<p className="team_name">{team}</p>
 							<br></br>
 							<p>School:</p>
 							<p className="team_info">{school}</p>
@@ -29,19 +29,21 @@ function TeamInfo({ team_id, team, school, supervisor, students }) {
 					<hr className="team_hr"/>
 					<div className="team_details-info">
 						<p className="team_name-field">{students[0]}</p>
-						<p className="team_name-field">
-						<hr className='team_student-separator'/>{students[1]}</p>
-						{(students[2] !== undefined && students[2].length >= 2)?
-						<p className="team_name-field">
 						<hr className='team_student-separator'/>
-						{students[2]}</p> :
+						<p className="team_name-field">{students[1]}</p>
+						{(students[2] !== undefined && students[2].length >= 2)?
+						<div>
+							<hr className='team_student-separator'/>
+							<p className="team_name-field">{students[2]}</p>
+						</div> :
 						<></>}
 						{(students[3] !== undefined && students[3].length >= 2)?
-						<p className="team_name-field">
-						<hr className='team_student-separator'/>
-						{students[3]}</p> :
+						<div>
+							<hr className='team_student-separator'/>
+							<p className="team_name-field">{students[3]}</p>
+						</div> :
 						<></>}
-						</div>
+					</div>
 				</div>
 				<hr />
 			</div>

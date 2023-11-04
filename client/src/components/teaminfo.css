@@ -125,9 +125,14 @@
     font-size: 25px;
 }
 
-.team_bottom .team_info{
+.team_bottom .team_name,
+.team_bottom .team_info {
     font-size: 20px;
     font-weight: 300;
+}
+
+.team_info {
+	text-transform: capitalize !important;
 }
 
 .team_student-separator {
