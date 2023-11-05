@@ -4,8 +4,7 @@
     box-sizing: content-box;
 }
 
-.team_container {
-    height: 90vh;
+.team_container {	
     width: 100%;
     display: flex;
     align-items: center;
@@ -13,7 +12,6 @@
     background-color: #e6ebe0;
     flex-direction: row;
     flex-flow: wrap;
-
 }
 
 .team_font{
@@ -61,18 +59,6 @@
     font-size: 15px;
     font-weight: normal;
 }
-.team_barcode img
-{
-    height: 65px;
-    width: 65px;
-    text-align: center;
-    margin: 5px;
-}
-.team_barcode{
-    text-align: center;
-    position: relative;
-    top: 70px;
-}
 
 .team_back
 {
@@ -82,12 +68,7 @@
     background-color: #1c7ed6;
 
 }
-.team_qr img{
-    height: 80px;
-    width: 100%;
-    margin: 20px;
-    background-color: white;
-}
+
 .team_Details {
     color: white;
     text-align: center;
@@ -144,22 +125,29 @@
 	width: 100%;
 }
 
-@media screen and (max-width:400px)
-{
-    .team_container{
-        height: 130vh;
-    }
-    .team_container .team_front{
-        margin-top: 50px;
-    }
-}
 @media screen and (max-width:600px)
 {
-    .team_container{
-        height: 130vh;
-    }
-    .team_container .team_front{
-        margin-top: 50px;
+	.team_container {
+		flex-direction: column;
+		column-gap: 20px;
+		row-gap: 30px;
+	}
+    .team_container .team_font{
+        margin-top: 5vh;
     }
 
+	.team_padding{
+		padding-right: 0px;
+	}
+
+	.team_back,
+	.team_font {
+		width: 80vw;
+	}
+}
+
+@media (min-width: 600px) {
+	.team_container {
+		height: 90vh;
+	}
 }
