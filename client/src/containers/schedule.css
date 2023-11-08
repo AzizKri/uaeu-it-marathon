@@ -1,0 +1,58 @@
+*{
+    margin: 00px;
+    padding: 00px;
+    box-sizing: content-box;
+	text-align: center;
+}
+
+.schedule {
+	margin-top: 4rem;
+    height: 90%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #e6ebe0;
+    flex-direction: row;
+    flex-flow: wrap;
+}
+
+.schedule_main {
+	display: flex;
+	flex-direction: column;
+	width: 80vw;
+	background-color: rgb(188, 218, 238);
+	border-radius: 8px;
+}
+
+.schedule_main_title {
+	font-size: 32px;
+	margin: 2rem;
+}
+
+.schedule_main_events_shared {
+	display: flex;
+	flex-direction: row;
+}
+
+.schedule_main_events_shared_long {
+	display: flex;
+	justify-content: center;
+}
+
+.Powered {
+	margin-top: 2rem;
+}
+
+@media screen and (max-width: 1030px) {
+    body{
+		margin: 2rem 0;
+	}
+}
+
+@media screen and (max-width: 600px) {
+	.schedule_main_events_shared {
+		display: flex;
+		flex-direction: column;
+	}
+}
