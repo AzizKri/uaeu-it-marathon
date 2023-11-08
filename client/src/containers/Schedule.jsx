@@ -10,7 +10,7 @@ function Schedule() {
 						IT Marathon Program
 					</div>
 					<div className='schedule_main_events'>
-						<ITEvent title='Reception & Registration' info='Reception @ CIT, Male Side' startTime='1699474295' endTime='1699474395' />
+						<ITEvent title='Reception & Registration' info='Reception @ CIT, Male Side' startTime='1700110800' endTime='1700114400' />
 						<ITEvent title='Opening Ceremony' info='Auditorium @ CIT, Male Side' startTime='1700114400' endTime='1700116200' />
 						<div className='schedule_main_events_shared'>
 							<div className='schedule_main_events_shared_long'>
