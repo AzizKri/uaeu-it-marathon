@@ -81,7 +81,7 @@ function InfoPage() {
 			const stu = dataList.find((code) => code === path)
 			if (stu) {
 				const info = data[data.findIndex((row) => row["Code"] === path)]
-				setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team Name"]} supervisor={info["Supervisor Name"]}/>)
+				setElement(<StudentInfo title={info["Title"]} name={info["Name"]} school={info["School"]} team={info["Team Name"]} supervisor={info["Supervisor Name"]} groupid={info["Group"]}/>)
 			} else if (data === undefined) {
 				setElement(<Loading />)
 			} else {

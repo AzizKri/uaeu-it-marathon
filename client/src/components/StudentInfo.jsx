@@ -1,7 +1,7 @@
 import React from 'react';
 import "./studentinfo.css";
 
-function StudentInfo({ title, name, school, team, supervisor }) {
+function StudentInfo({ title, name, school, team, supervisor, groupid }) {
     return (
         <div>
             <div className="container">
@@ -17,6 +17,9 @@ function StudentInfo({ title, name, school, team, supervisor }) {
                                 <img src="/logo256.png" alt='itm logo'/>
                             </div>
                             <br />
+							<div className='group_id'>
+								<p><b>Group: </b>{groupid}</p>
+							</div>
                         </div>
                     </div>
                 </div>
