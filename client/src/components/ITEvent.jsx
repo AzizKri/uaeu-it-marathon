@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import './itevent.css';
 const { DateTime, Duration } = require("luxon");
 
-function ITEvent({ title, info, startTime, endTime }) {
+function ITEvent({ title, info, startTime, endTime, customHeight }) {
 	const ST = parseInt(startTime * 1000);
 	const ET = parseInt(endTime * 1000);
 	const stime = DateTime.fromMillis(ST);
@@ -25,7 +25,9 @@ function ITEvent({ title, info, startTime, endTime }) {
 	}, [ET, ST, eventTimeLeft, timeLeft])
 
 	const color = {
-		background: (ctime < etime)? (ctime < stime)? 'rgba(18, 57, 74, 0.3)' : 'rgba(58, 167, 76, 0.3)' : 'rgba(179, 50, 50, 0.3)'};
+		background: (ctime < etime)? (ctime < stime)? 'rgba(18, 57, 74, 0.3)' : 'rgba(58, 167, 76, 0.3)' : 'rgba(179, 50, 50, 0.3)',
+		height: customHeight? parseInt(customHeight) : '',
+	};
 	//													not started			:		started			  :		ended
     return (
 		<div className="event" style={color}>
