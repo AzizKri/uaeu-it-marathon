@@ -38,3 +38,16 @@
   overflow: hidden;
   justify-content: flex-end;
 }
+
+.redirect_text,
+.not_found h1 {
+	position: absolute;
+	top: 50%;
+}
+
+@media screen and (max-width: 1200px) {
+	.not_found,
+	.redirect {
+		height: 95%;
+	}
+}
