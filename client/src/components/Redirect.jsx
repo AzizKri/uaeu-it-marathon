@@ -9,11 +9,11 @@ const Redirect = ({ Link }) => {
         </Helmet>
         <div className='redirect_text'>
           <h1>Redirecting...</h1>
-          <div className='Powered'>
-              <p><b>Powered by</b></p>
-              <img src="/cs.png" alt='CS Club'/>
-          </div>
         </div>
+			<div className='Powered'>
+				<p><b>Powered by</b></p>
+				<img src="/cs.png" alt='CS Club'/>
+			</div>
     </div>
   )
 }
