@@ -1,6 +1,8 @@
 import ITEvent from '../components/ITEvent';
 import './schedule.css';
 
+const program = process.env.REACT_APP_SCHEDULE;
+
 function Schedule() {
 	return (
 		<div>
@@ -26,6 +28,9 @@ function Schedule() {
 						</div>
 						<ITEvent title='Closing and Award Ceremony' info='Auditorium @ CIT, Male Side' startTime='1700134200' endTime='1700136000' />
 					</div>
+				</div>
+				<div className='schedule_download'>
+					<div className="button-3" ><a href={program} target='_blank' rel='noopener noreferrer'>Download Schedule PDF</a></div>
 				</div>
 			</div>
 			<div className='Powered'>
