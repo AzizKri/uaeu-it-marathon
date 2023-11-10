@@ -1,5 +1,6 @@
 import ITEvent from '../components/ITEvent';
 import './schedule.css';
+import { HiDocumentDownload } from 'react-icons/hi';
 
 const program = process.env.REACT_APP_SCHEDULE;
 
@@ -30,7 +31,12 @@ function Schedule() {
 					</div>
 				</div>
 				<div className='schedule_download'>
-					<div className="button-3" ><a href={program} target='_blank' rel='noopener noreferrer'>Download Schedule PDF</a></div>
+					<div className="button-3" >
+						<a href={program} target='_blank' rel='noopener noreferrer'>
+						<HiDocumentDownload size='38'/>
+						Download Schedule PDF
+						</a>
+					</div>
 				</div>
 			</div>
 			<div className='Powered'>
