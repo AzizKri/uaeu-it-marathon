@@ -8,18 +8,18 @@ function StudentInfo({ title, name, school, team, supervisor, groupid }) {
                 <div className="padding">
                     <div className="font">
                         <div className="top">
-                            <img src="/download.png" alt='student'/>
+                            <img src="/download.png" alt='student' />
                         </div>
                         <div className="bottom">
                             <p>{title}</p>
                             <p className="desi">IT Marathon</p>
                             <div className="barcode">
-                                <img src="/logo256.png" alt='itm logo'/>
+                                <img src="/logo256.png" alt='itm logo' />
                             </div>
                             <br />
-							<div className='group_id'>
-								<p><b>Group: </b>{groupid}</p>
-							</div>
+                            <div className='group_id'>
+                                <p><b>Group: </b>{groupid}</p>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -33,7 +33,7 @@ function StudentInfo({ title, name, school, team, supervisor, groupid }) {
                         <p className="school">{school}</p>
                         <p className="supervisor-field"><b>Team: </b></p>
                         <p className="supervisor">{team}</p>
-                        <p className="supervisor-field"><b>{(supervisor.length <= 2)? "" : "Supervisor: "}</b></p>
+                        <p className="supervisor-field"><b>{(supervisor.length <= 2) ? "" : "Supervisor: "}</b></p>
                         <p className="supervisor">{supervisor}</p>
                     </div>
                 </div>
@@ -41,7 +41,7 @@ function StudentInfo({ title, name, school, team, supervisor, groupid }) {
             </div>
             <div className='Info_Powered'>
                 <p><b>Powered by</b></p>
-                <img src="/cs.png" alt='CS Club'/>
+                <img src="/cs.png" alt='CS Club' />
             </div>
         </div>
     );

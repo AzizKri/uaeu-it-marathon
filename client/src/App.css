@@ -1,53 +1,54 @@
 .App {
-  text-align: center;
-  height: 100%;
-  width: 100%;
+    text-align: center;
+    height: 100%;
+    width: 100%;
 }
 
 .Powered {
-  display: flex;
-  padding-bottom: 2vh;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 50vh;
+    display: flex;
+    padding-bottom: 2vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 50vh;
 }
 
 .Info_Powered {
-  display: flex;
-  padding-bottom: 2vh;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+    display: flex;
+    padding-bottom: 2vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
 }
 
 .Powered img,
 .Info_Powered img {
-  max-height: 8vh;
+    max-height: 8vh;
 }
 
 .not_found,
 .redirect {
-  margin: 0;
-  display: flex;
-  position: absolute;
-  width: 100%;
-  flex-direction: column;
-  align-items: center;
-  height: 100%;
-  overflow: hidden;
-  justify-content: flex-end;
+    margin: 0;
+    display: flex;
+    position: absolute;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    overflow: hidden;
+    justify-content: flex-end;
 }
 
 .redirect_text,
 .not_found h1 {
-	position: absolute;
-	top: 50%;
+    position: absolute;
+    top: 50%;
 }
 
 @media screen and (max-width: 1200px) {
-	.not_found,
-	.redirect {
-		height: 95%;
-	}
+
+    .not_found,
+    .redirect {
+        height: 95%;
+    }
 }

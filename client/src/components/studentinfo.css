@@ -1,4 +1,4 @@
-*{
+* {
     margin: 00px;
     padding: 00px;
     box-sizing: content-box;
@@ -16,14 +16,14 @@
 
 }
 
-.font{
+.font {
     height: 375px;
     width: 250px;
     position: relative;
     border-radius: 10px;
 }
 
-.top{
+.top {
     height: 30%;
     width: 100%;
     background-color: #1c7ed6;
@@ -33,7 +33,7 @@
     border-top-right-radius: 15px;
 }
 
-.bottom{
+.bottom {
     height: 70%;
     width: 100%;
     background-color: white;
@@ -42,16 +42,17 @@
     border-bottom-right-radius: 15px;
 }
 
-.top img{
+.top img {
     height: 100px;
     width: 100px;
     background-color: #e6ebe0;
     border-radius: 10px;
     position: absolute;
-    top:60px;
+    top: 60px;
     left: 75px;
 }
-.bottom p{
+
+.bottom p {
     position: relative;
     top: 60px;
     text-align: center;
@@ -60,42 +61,46 @@
     font-size: 30px;
     text-emphasis: spacing;
 }
-.bottom .desi{
-    font-size:12px;
+
+.bottom .desi {
+    font-size: 12px;
     color: grey;
     font-weight: normal;
 }
-.bottom .no{
+
+.bottom .no {
     font-size: 15px;
     font-weight: normal;
 }
-.barcode img
-{
+
+.barcode img {
     height: 65px;
     width: 65px;
     text-align: center;
     margin: 5px;
 }
-.barcode{
+
+.barcode {
     text-align: center;
     position: relative;
     top: 70px;
 }
 
-.back
-{
+.back {
     height: 375px;
     width: 250px;
     border-radius: 10px;
     background-color: #1c7ed6;
 
 }
-.qr img{
+
+.qr img {
     height: 80px;
     width: 100%;
     margin: 20px;
     background-color: white;
 }
+
 .Details {
     color: white;
     text-align: center;
@@ -104,7 +109,7 @@
 }
 
 
-.details-info{
+.details-info {
     color: white;
     text-align: left;
     padding: 5px;
@@ -121,45 +126,47 @@
     padding: 40px;
 }
 
-.logo img{
+.logo img {
     height: 100%;
     width: 100%;
-    color: white ;
+    color: white;
 
 }
-.padding{
+
+.padding {
     padding-right: 20px;
 }
 
-.name-field{
+.name-field {
     font-size: 25px;
 }
 
-.supervisor-field{
+.supervisor-field {
     margin-top: 20px;
     font-size: 25px;
 }
 
-.school-field{
+.school-field {
     margin-top: 20px;
     font-size: 25px;
 }
 
-@media screen and (max-width:400px)
-{
-    .container{
+@media screen and (max-width:400px) {
+    .container {
         height: 130vh;
     }
-    .container .front{
+
+    .container .front {
         margin-top: 50px;
     }
 }
-@media screen and (max-width:600px)
-{
-    .container{
+
+@media screen and (max-width:600px) {
+    .container {
         height: 130vh;
     }
-    .container .front{
+
+    .container .front {
         margin-top: 50px;
     }
 
