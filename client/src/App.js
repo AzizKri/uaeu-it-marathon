@@ -6,7 +6,7 @@ function App() {
 	const location = window.location.href.split("/");
 	const path = location[location.length - 1];
 
-	if (path === 'schedule') {
+	if (path.toLowerCase() === 'schedule') {
 		return (
 			<div className="App">
 				<Schedule />
